@@ -164,7 +164,6 @@ public interface DaoMessage {
             " WHERE account.`synchronize`" +
             " AND folder.unified" +
             " AND NOT message.ui_seen AND NOT message.ui_hide" +
-            " AND (account.seen_until IS NULL OR message.stored > account.seen_until)" +
             " ORDER BY message.received")
     LiveData<List<EntityMessage>> liveUnseenUnified();
 
